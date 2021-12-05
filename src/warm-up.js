@@ -19,15 +19,18 @@ var inStock = 3
 
 // Reassign (not initialize) your "inStock" variable from above. We got a new shipment! Use a built in math operator to make
 // the inStock count double what it currently is.
+inStock *= 2
 
 
 // Reassign (not initialize) your "inStock" variable from above. You got hungry and needed a snack!
 // Use a built in math operator to decrement the inStock count by 1.
 
+inStock -= 1
 
 // Initialize a new variable "isFavorite", and assign it to a boolean value indicating
 // if the food you chose is your favorite food or not
 
+var isFavorite = true
 
 
 // Create a new variable named "shouldOrderMore", and use a comparison operator to
@@ -35,7 +38,7 @@ var inStock = 3
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
 
-
+var shouldOrderMore = inStock < 20
 
 //------------------------- Conditionals -------------------------//
 
@@ -45,6 +48,13 @@ var inStock = 3
 // the statement 'I'm going to eat some [food]!', otherwise, log the statement
 // 'We need to get some more [food].'
 
+var stockCount = 0
+var food = 'bread'
+if (stockCount >= 1) {
+  console.log(`I'm going to eat some ${food}!`);
+ } else {
+   console.log(`We need to get some more ${food}.`)
+  }
 
 
 // Express the following in code: If the variable "isFavorite" is true,
@@ -52,25 +62,34 @@ var inStock = 3
 // statement 'I recently ate [food]'. In either case, the value stored in
 // the "food" variable should be included in the logged statement.
 
-
+var isFavorite = false
+var food = 'frog'
+if (isFavorite == true) {
+  console.log(`My favorite food is ${food}!`)
+} else {
+  console.log(`I recently ate ${food}.`)
+}
 
 //------------------------- Arrays -------------------------//
 
 
 // Create a new variable "vegetables" and assign it to an Array of 5 different
 // vegetables, represented by their names as Strings.
-
+var vegetables = ['tomato', 'potato', 'carrot', 'avocado', 'garlic'];
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
 
+console.log(vegetables[2]);
 
 // Create a new variable "fruits" and assign it to an Array of 7
 // different fruits.
 
+var fruits = ['grapes', 'apples', 'kiwis', 'plums', 'peaches', 'pears', 'nectarines'];
 
 // Write the code to access the 5th element of the array, using bracket notation.
 
+console.log(fruits[4])
 
 //------------------------- Objects -------------------------//
 
@@ -79,6 +98,14 @@ var inStock = 3
 // the value for isOpen should be true. Which other key value pairs would make sense to add to this object?
 
 
+var groceryStore = {
+  name:  'King Soopers',
+  isOpen:  true,
+  veganOnly:  false,
+  hours: '6am - 9pm',
+}
 
 // Write the code to add the key of location, with the value of 'Denver, Colorado'. Use dot
 // notation to do this. DO NOT modify your code from above.
+
+groceryStore.location = 'Denver, Colorado';
